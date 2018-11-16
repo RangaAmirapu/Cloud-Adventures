@@ -2,5 +2,5 @@
 
 ## Contents:
 
-- ** Docker cheat sheet **
+- **Docker cheat sheet**
 
