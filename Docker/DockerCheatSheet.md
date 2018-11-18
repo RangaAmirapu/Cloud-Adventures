@@ -99,3 +99,77 @@
  - **View statistics about running containers**
 	 - `docker container stats`
 
+
+# Docker Networking
+
+ - **View docker networks**
+	 - `docker network ls`
+
+ - **Inspect a network**
+	 - `docker inspect <networkname>`
+
+ - **Create a network**
+	 - `docker network create --driver bridge <networkname>`
+
+- **Run a Docker container with custom network**
+	 - `docker container run --rm -itd -p <port>:<port> --net <networkname> --name <containername> <imageName>`
+
+ - **Find IP address of a container**
+	 - `docker exec <containername> ifconfig`
+
+ - **Ping a container form another**
+	 - `docker exec <containername> ping <IPAddressofAnotherContainer>`
+
+
+# Docker house keeping
+
+ - **Check disk space**
+	 - `docker system df`
+
+ - **Clean unused space**
+	 - `docker system prune -f`
+
+ - **Clean all unused images**
+	 - `docker system prune -a`
+
+ - **Stop all containers**
+	 - `docker container stop $(docker container ls -a -q)`
+
+# Docker Compose
+
+ - **Build an image**
+	 - `docker-compose build`
+	 
+ - **Pull an image**
+	 - `docker-compose pull`
+
+ - **Start a project**
+	 - `docker-compose up`
+
+ - **Build and start a project**
+	 - `docker-compose up --build`
+
+ - **Run in  background**
+	 - `docker-compose up --build -d`
+
+ - **List Containers**
+	 - `docker-compose ps`
+
+ - **View Logs**
+	 - `docker-compose logs -f`
+
+ - **Restart all containers**
+	 - `docker-compose restart`
+
+ - **Restart specific containers**
+	 - `docker-compose restart <containerName>`
+
+ - **Get into interactive prompt in a running container**
+	 - `docker-compose exec <containerName> sh`
+
+ - **Start a container**
+	 - `docker-compose up <containerName>`
+
+ - **Remove stopped containers**
+	 - `docker-compose rm -f`
+	 - `docker-compose prune -f`
