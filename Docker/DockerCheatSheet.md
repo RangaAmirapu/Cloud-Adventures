@@ -30,7 +30,7 @@
 # Building and running docker  containers
 
  - **Hello World**
-	 -     `docker run hello-world`
+	 - `docker run hello-world`
    
  - **Pulling and running an linux alpine container in interactive mode with opening container shell**
 	 - `docker run -it alpine sh`
