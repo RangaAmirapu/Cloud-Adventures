@@ -1,7 +1,9 @@
 
 
 
-> Written with [StackEdit](https://stackedit.io/).
+> Solutions for [learngitbranching](https://learngitbranching.js.org/).
+
+
 
 # Introduction Sequence
 
@@ -92,3 +94,4 @@
     git describe c6
     git commit
 
+> Written with [StackEdit](https://stackedit.io/).
