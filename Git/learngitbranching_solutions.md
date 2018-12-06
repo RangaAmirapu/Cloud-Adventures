@@ -94,4 +94,28 @@
     git describe c6
     git commit
 
+# Advanced Topics
+
+###  Rebasing over 9000 times
+
+    git rebase master bugFix
+    git rebase bugFix side
+    git rebase side another
+    git branch -f master c7'
+
+### Multiple Parents
+
+    git branch -f bugWork HEAD~^2^
+
+### Branch Spaghetti
+
+    git rebase -i c1
+    git branch -f master c5
+    git rebase -i c1
+    git branch -f one c2'
+    git branch -f three c2
+    git branch -f two c2''
+    git branch -f master c5
+
+
 > Written with [StackEdit](https://stackedit.io/).
