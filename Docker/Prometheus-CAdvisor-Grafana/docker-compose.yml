@@ -1,0 +1,43 @@
+version: '3'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - cadvisor
+  cadvisor:
+    image: google/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - 8080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+  pushgateway:
+    image: prom/pushgateway:latest
+    container_name: push-gateway
+    ports:
+      - 9091:9091
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - 9100:9100
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - 3000:3000
+    environment:
+        - GF_SECURITY_ADMIN_PASSWORD=password
+    depends_on:
+      - prometheus
+      - cadvisor
