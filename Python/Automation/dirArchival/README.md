@@ -1,1 +1,1 @@
- **Archive a given list of source folders and place them in the target directories**
+ **dirArchival.py : Archive a given list of source folders and place them in the target directories**
