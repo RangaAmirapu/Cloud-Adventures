@@ -1,0 +1,15 @@
+{
+  "name": "notetakingapp_nodejs",
+  "version": "1.0.0",
+  "description": "Notetaking app with nodejs\u001b[D\u001b[D.\u001b[C\u001b[Cjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ranga",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "yargs": "^8.0.2"
+  }
+}

@@ -1,0 +1,2 @@
+grep -vwi "that"
+
