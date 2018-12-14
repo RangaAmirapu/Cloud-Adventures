@@ -1,2 +1,3 @@
-sort -t '|' -k 2 -nr 
+ar=($(cat))
+echo ${ar[@]/[:A-Z:]/.}
 
